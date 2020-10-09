@@ -8,7 +8,9 @@ Over-speeding of cars has caused many road accidents over the years. There needs
 
 #### Block diagram:
 
-![ ](Images/Bdiagram.png)
+![ ](Images/DiagramA.jpeg)
+
+![ ](Images/DiagramB.jpeg)
 
 Group members - Sunny devgan, Varundeep singh, Govind raj
 
