@@ -15,15 +15,25 @@ Block diagram for Arduino side
 
 ##### Hardware and Software Requirements:
    1.Beaglebone Black
+   
    2.Lamp
+   
    3.IR Sensor
+   
    4.Transformer
+   
    5.LCD
+   
    6.Buzzer
+   
    7.Relay
+   
    8.WIFI module (ESP8266)
+   
    9.Arduino IDE, Eclipse IDE,Easy EDA
+   
    10.Bluetooth 4.0
+   
    11.MC Programming Language: C
 
 
