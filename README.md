@@ -13,7 +13,7 @@ Block diagram of Beaglebone side:
 Block diagram for Arduino side
 ![ ](Images/DiagramB.jpeg)
 
-##### Hardware and Software Requirements:
+#### Hardware and Software Requirements:
    1.Beaglebone Black
    
    2.Lamp
