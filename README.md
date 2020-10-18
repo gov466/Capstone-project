@@ -20,7 +20,7 @@ Block diagram for Arduino side
    
    3.IR Sensor
    
-   4.Transformer
+   4.Regulator
    
    5.LCD
    
