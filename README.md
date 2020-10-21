@@ -16,7 +16,7 @@ Block diagram for Arduino side
 #### Hardware and Software Requirements:
    1.[Beaglebone_Black](https://www.digikey.ca/en/products/detail/beagleboard-by-seeed-studio/102110420/12719590?utm_adgroup=Evaluation%20Boards%20-%20Embedded%20-%20MCU%2C%20DSP&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_Development%20Boards%2C%20Kits%2C%20Programmers&utm_term=&productid=12719590&gclid=Cj0KCQjwuL_8BRCXARIsAGiC51BVzyq_I_2stbbYRDzswXCFJ0aKnE0YJBpbYnf2cxqE4PewZnPxM0kaAh7zEALw_wcB)
    
-   2.[Lamp](https://www.amazon.ca/gp/product/B0781M55BN/ref=ppx_yo_dt_b_asin_title_o03_s02?ie=UTF8&psc=1)[Testing](https://www.youtube.com/watch?v=pOQb8jlyHUE)
+   2.[Lamp](https://www.amazon.ca/gp/product/B0781M55BN/ref=ppx_yo_dt_b_asin_title_o03_s02?ie=UTF8&psc=1)              [Testing_of_lamp](https://www.youtube.com/watch?v=pOQb8jlyHUE)
    
    3.[IR_Sensor]
    
