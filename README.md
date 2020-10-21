@@ -32,6 +32,8 @@ Block diagram for Arduino side
    
    9.[Bluetooth 4.0]
    
+   10.[Arduino ide and Eclipse ide]
+   
 
 
 Group members - Sunny devgan, Varundeep singh, Govind raj
