@@ -36,8 +36,8 @@ Block diagram for Arduino side
    
 
 
-Group members - Sunny devgan, Varundeep singh, Govind raj
+Group members - [Sunny devgan](https://github.com/MrSunnyDevgan), [Varundeep singh](https://github.com/varundeepsethi), [Govind raj](https://github.com/gov466)
 
-Project guide - Prof. Dr. Mike Aleshams
+Project guide - [Prof. Dr. Mike Aleshams](https://github.com/mikeshams)
 
    #### PROJECT ON PROGRESS                                                                                                                                                                                                                                                                      
