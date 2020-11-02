@@ -1,4 +1,4 @@
-int IR1 = 8; // connect ir sensor to the digital arduino pin number 8
+int IR1 = 2; // connect ir sensor to the digital arduino pin number 2
 int LED = 13; // connect a LED to arduino pin 13 
 
 
