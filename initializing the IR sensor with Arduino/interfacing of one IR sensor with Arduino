@@ -1,0 +1,25 @@
+int IR1 = 8; // connect ir sensor to the digital arduino pin number 8
+int LED = 13; // connect a LED to arduino pin 13 
+
+
+void setup() 
+{
+
+  pinMode (IR1, INPUT); // sensor pin INPUT
+  pinMode (LED, OUTPUT); // Led pin OUTPUT
+}
+
+void loop() // initializing an endless loop
+{
+  int statusSensor = digitalRead (IR1);
+  
+  if (statusSensor == 1)
+    digitalWrite(LED, LOW); // LED low
+  }
+  
+  else
+  {
+    digitalWrite(LED, HIGH); // LED High
+  }
+  
+}
