@@ -35,10 +35,11 @@ void loop()
     { 
       delay(1);//Waiting until Car Reaches Sensor 2
     }
-    //Car reached at Sensor 2
+    serial.println(" car Detected at second sensor");// print a message for second car detection
+    
     
     end_ = millis(); //Record the Time when Car reaches sensor 2
-
+    //Car reached at Sensor 2
     
     difference = end_-begin_;//Calculate total time taken
     time_in_seconds = difference/1000; // Converting milliseconds to seconds //1ms=0.001secs
