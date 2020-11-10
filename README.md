@@ -35,6 +35,7 @@ Block diagram for Arduino side
    10.[Arduino ide and Eclipse ide]
    
 #### Schematic Diagram
+
 ![ ](Images/Schematic Diagram-1.jpg)
 
 
