@@ -1,0 +1,50 @@
+#include <ESP8266WiFi.h>                                          // header file for ESP8266
+
+const char* ssid     = "572pharmacy";                             //Name of WiFi
+const char* password = "572pharmacY001";                          //Password of WiFi
+
+void setup()
+{
+    Serial.begin(9600);                                           // setting baud rate to 9600 for Serial monitor
+    delay(10);                                                    // time dealy
+
+    
+    // We start by connecting to a WiFi network
+
+
+    Serial.println();
+    Serial.print("Connecting to ");
+    Serial.println(ssid);
+
+    WiFi.begin(ssid, password);                                   //Connect to WiFi
+
+    while (WiFi.status() != WL_CONNECTED)                         //Wait until WifI not connected
+    {
+        delay(500);                                               // time delay
+        Serial.print(".");                                        // display message for no connetion
+    }
+
+    Serial.println("");
+    Serial.println("WiFi connected");                             // display message for connection
+    Serial.println("IP address: ");                                
+    Serial.println(WiFi.localIP());                               //Print ip address            
+}
+
+
+
+void loop()
+{
+    if(Serial.available())                                        //If any data coming from Serial
+    {
+      while(Serial.available())
+      {
+        Serial.read();
+      }
+
+      delay(1000);
+      Serial.print("\n Connected to WiFi: ");                     //Send Print Acknowledgement
+      Serial.println(ssid);
+      
+    }
+    
+}
