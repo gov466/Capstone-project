@@ -1,0 +1,81 @@
+#include <stdio.h>                                                      //Standard C input Output Library
+#include <unistd.h>                                                     //Standard C input Output Library
+
+#include <string.h>                                                     //C Library for various String Operations
+#include <termios.h>                                                    //header file For setting UART configuration
+#include <sys/stat.h>                                                   //system stats id for structure of the data returned by the functions 
+#include <fcntl.h>                                                      //function control is for Read and Write of file
+
+ 
+ int main (void)                                                        // Main function
+{
+    int file;
+    char rcv[100];                                                      // declare a char array for receiving data
+    char send[100];                                                     // A buffer char array to store temporary data
+    
+    int sbytes;                                                         //to store number of bytes in string
+    int wbytes;                                                         // to store number of outgoing bytes
+    int rbytes;                                                         // To store number of read bytes
+	
+
+    // /dev/ttyO1 is linked with UART1 Port of Beaglebone 
+    
+    if ((file = open("/dev/ttyO1", O_RDWR))<0)                         // Try opening file in Read Write mode
+    {
+		
+        printf("UART: Failed to open the file.\n");                    //A display message for faliure attempt
+        return 0;
+    }
+    
+    else
+    {
+         printf("UART: Started\n");                                   //A display message for successful attempt 
+		
+	}
+
+   
+ 
+    struct termios options;                                          // the termios structure is vital
+    tcgetattr(file, &options);                                       // sets the parameters associated with file
+
+    // Set up the communications options:
+    // 9600 baud, 8-bit, enable receiver, no modem control lines
+   
+    options.c_cflag = B9600 | CS8 | CREAD | CLOCAL;                 //Setting Baud Rate and other Parameters
+    options.c_iflag = IGNPAR | ICRNL;                               // ignore parity errors, CR -> newline
+    tcflush(file, TCIFLUSH);                                        // discard file information not transmitted
+    tcsetattr(file, TCSANOW, &options);                             // changes occur immmediately
+
+
+    strcpy(send, "HELLO");                                          // Copy a string in buf char array
+    sbytes = strlen(send);                                          // Store size of buf array in nbytes
+
+    wbytes = write(file, send, sbytes);                             // Sending message to ESP
+    
+    sleep(1);
+
+	
+	
+	rbytes = read(file,&rcv,100);                                     // Read the incoming Message from ESP
+	
+	
+	printf("\n Incoming Bytes  - %d \n",rbytes);                      // No. of received bytes
+	
+	
+	if(rbytes > 1) //If received some data
+	{
+		for(int i=0;i<rbytes;i++)                                        //a for loop to print data byte by byte
+		{
+			printf("%c",rcv[i]);                                          //print a character of message from ESP
+		}
+		printf("\n\n\n\n");
+
+        sleep(2);
+	}
+	
+	
+	
+  
+  
+    close(file); //Close 
+}
