@@ -54,9 +54,9 @@ void clear_display()  //Function to clear Display
     * Display clear, cursor home                                           * 
     * -------------------------------------------------------------------- */  
    usleep(40);                // wait 40usec  
-   i2c_send_byte(0b00000100); //  
+   i2c_send_byte(0b00000100);  
    i2c_send_byte(0b00000000); // D7-D4=0  
-   i2c_send_byte(0b00010100); //  
+   i2c_send_byte(0b00010100);   
    i2c_send_byte(0b00010000); // D0=display_clear  
   
 }
@@ -67,9 +67,9 @@ void display_on()
     * Turn on the display                                                  * 
     * -------------------------------------------------------------------- */  
    usleep(40);                // wait 40usec  
-   i2c_send_byte(0b00001100); //  
+   i2c_send_byte(0b00001100);  
    i2c_send_byte(0b00001000); // D7-D4=0  
-   i2c_send_byte(0b11101100); //  
+   i2c_send_byte(0b11101100);   
    i2c_send_byte(0b11101000); // D3=1 D2=display_on, D1=cursor_on, D0=cursor_blink  
    cursor_pos =1 ;  
 }   
@@ -153,13 +153,13 @@ void lcd_init()
    i2c_send_byte(0b00110000); // D7=0, D6=0, D5=1, D4=1, RS,RW=0 EN=0  
   
    sleep(0.1);                // wait 10msec  
-   i2c_send_byte(0b00110100); //   
+   i2c_send_byte(0b00110100);   
    i2c_send_byte(0b00110000); // same  
    sleep(0.1);                // wait 10msec  
-   i2c_send_byte(0b00110100); //  
+   i2c_send_byte(0b00110100);   
    i2c_send_byte(0b00110000); // 8-bit mode init complete  
    sleep(0.1);                // wait 10msec  
-   i2c_send_byte(0b00100100); //  
+   i2c_send_byte(0b00100100);   
    i2c_send_byte(0b00100000); // switched now to 4-bit mode  
   
   
@@ -167,7 +167,7 @@ void lcd_init()
     * 4-bit mode initialization complete. Now configuring the function set * 
     * -------------------------------------------------------------------- */  
    usleep(100);               // wait 100usec  
-   i2c_send_byte(0b00100100); //  
+   i2c_send_byte(0b00100100);   
    i2c_send_byte(0b00100000); // keep 4-bit mode  
    i2c_send_byte(0b10000100); //  D3=2lines
    i2c_send_byte(0b10000000); // D2=char5x8  
