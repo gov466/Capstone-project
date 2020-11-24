@@ -19,7 +19,7 @@ int main(void)
     
   if(speed > threshold)
   {
-   for(int i=0;i<2;i++)  //for turning off bulb and buzzer 8 times
+   for(int i=0;i<2;i++)  //for turning off bulb and buzzer 2 times
    {
     for(int j=0;j<2;j++)  //for turn on and off buzzer and bulb for 2 times with delay
     {
