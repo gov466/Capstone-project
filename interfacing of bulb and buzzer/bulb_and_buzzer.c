@@ -19,29 +19,29 @@ int main(void)
     
   if(speed > threshold)
   {
-   for(int i=0;i<2;i++)  //for turning off bulb and buzzer 2 times
+   for(int i=0;i<2;i++)                         //for turning off bulb and buzzer 2 times
    {
-    for(int j=0;j<2;j++)  //for turn on and off buzzer and bulb for 2 times with delay
+    for(int j=0;j<2;j++)                        //for turn on and off buzzer and bulb for 2 times with delay
     {
-     printf("BUZZER ON \n");
-     pin_high(port8, buzzerPin);
-     iolib_delay_ms(200);
-     pin_low(port8, buzzerPin);
-     iolib_delay_ms(200);
+     printf("BUZZER ON \n");                    //print buzzer on
+     pin_high(port8, buzzerPin);                //setting port8 pin high
+     iolib_delay_ms(200);                       //delay
+     pin_low(port8, buzzerPin);                 //setting port8 pin low
+     iolib_delay_ms(200);                       //delay
 
-     printf("BULB FLASH \n");
-     pin_low(port9, bulbPin);
-     iolib_delay_ms(200);
-     pin_high(port9, bulbPin);
-     iolib_delay_ms(200);
+     printf("BULB FLASH \n");                  //print bulb on
+     pin_low(port9, bulbPin);                  //setting port9 pin high
+     iolib_delay_ms(200);                      //delay
+     pin_high(port9, bulbPin);                 //setting port9 pin low
+     iolib_delay_ms(200);                      //delay
      }
-     iolib_delay_ms(900); //delay after two beeps and blinks
-    iolib_delay_ms(900); //giving again delay since one iolib delay of 999ms
+     iolib_delay_ms(900);                     //delay after two beeps and blinks
+    iolib_delay_ms(900);                      //giving again delay since one iolib delay of 999ms
     }
-     printf("BUZZER OFF\n");   //turning off both bulb and buzzer after 8 times
-     pin_low(port8,buzzerPin);
-     printf("BULB OFF\n");
-     pin_high(port9,bulbPin);
+     printf("BUZZER OFF\n");                  //print buzzer off
+     pin_low(port8,buzzerPin);                //setting port8 pin low
+     printf("BULB OFF\n");                    //print bulb off
+     pin_high(port9,bulbPin);                 //setting port9 pin low
 
    }
 
