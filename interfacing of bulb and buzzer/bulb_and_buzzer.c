@@ -19,24 +19,24 @@ int main(void)
     
   if(speed > threshold)
   {
-   for(int i=0;i<8;i++)  //for turning off bulb and buzzer 8 times
+   for(int i=0;i<2;i++)  //for turning off bulb and buzzer 8 times
    {
     for(int j=0;j<2;j++)  //for turn on and off buzzer and bulb for 2 times with delay
     {
      printf("BUZZER ON \n");
      pin_high(port8, buzzerPin);
-     iolib_delay_ms(300);
+     iolib_delay_ms(200);
      pin_low(port8, buzzerPin);
-     iolib_delay_ms(300);
+     iolib_delay_ms(200);
 
      printf("BULB FLASH \n");
      pin_low(port9, bulbPin);
-     iolib_delay_ms(300);
+     iolib_delay_ms(200);
      pin_high(port9, bulbPin);
-     iolib_delay_ms(300);
+     iolib_delay_ms(200);
      }
      iolib_delay_ms(900); //delay after two beeps and blinks
-    iolib_delay_ms(600); //giving again delay since one iolib delay of 999ms
+    iolib_delay_ms(900); //giving again delay since one iolib delay of 999ms
     }
      printf("BUZZER OFF\n");   //turning off both bulb and buzzer after 8 times
      pin_low(port8,buzzerPin);
