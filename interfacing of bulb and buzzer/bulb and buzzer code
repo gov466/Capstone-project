@@ -22,16 +22,16 @@ int main(void)
         {
     printf("BUZZER ON \n");                    //print buzzer on
     pin_high(port8, buzzerPin);                //setting port8 pin high
-    iolib_delay_ms(300);                       //delay
-    pin_low(port8, buzzerPin);                 //setting port8 pin low
-    iolib_delay_ms(300);                       //delay
+    //iolib_delay_ms(300);                       //delay
+    //pin_low(port8, buzzerPin);                 //setting port8 pin low
+    //iolib_delay_ms(300);                       //delay
 
     printf("BULB FLASH \n");                   //print buzzer on
     pin_high(port9, bulbPin);                  //setting port9 pin high
-    iolib_delay_ms(300);                       //delay
-    pin_low(port9, bulbPin);                   //setting port9 pin low
-    iolib_delay_ms(300);                      //delay
-    
+    //iolib_delay_ms(300);                       //delay
+    //pin_low(port9, bulbPin);                   //setting port9 pin low
+    //iolib_delay_ms(300);                      //delay
+    iolib_delay_ms(60000);
         }
     else
     {
