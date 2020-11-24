@@ -16,29 +16,41 @@ int main(void)
   iolib_init();                                //iolib initialization
   iolib_setdir(port8, buzzerPin, DigitalOut);  //setting port8 pin 8 as output pin
   iolib_setdir(port9, bulbPin, DigitalOut);    //setting port9 pin 30 as output pin
-  while(1)  
-   {  
-        if(speed > threshold)                  //checking if speed>max speed 
-        {
-    printf("BUZZER ON \n");                    //print buzzer on
-    pin_high(port8, buzzerPin);                //setting port8 pin high
-    iolib_delay_ms(300);                       //delay
-    pin_low(port8, buzzerPin);                 //setting port8 pin low
-    iolib_delay_ms(300);                       //delay
-
-    printf("BULB FLASH \n");                   //print buzzer on
-    pin_high(port9, bulbPin);                  //setting port9 pin high
-    iolib_delay_ms(300);                       //delay
-    pin_low(port9, bulbPin);                   //setting port9 pin low
-    iolib_delay_ms(300);                      //delay
     
-    iolib_delay_ms(60000);
-        }
+  if(speed > threshold)
+  {
+   for(int i=0;i<8;i++)
+   {
+    for(int j=0;j<2;j++)
+    {
+     printf("BUZZER ON \n");
+     pin_high(port8, buzzerPin);
+     iolib_delay_ms(300);
+     pin_low(port8, buzzerPin);
+     iolib_delay_ms(300);
+
+     printf("BULB FLASH \n");
+     pin_low(port9, bulbPin);
+     iolib_delay_ms(300);
+     pin_high(port9, bulbPin);
+     iolib_delay_ms(300);
+     }
+     iolib_delay_ms(900);
+    iolib_delay_ms(600);
+    }
+     printf("BUZZER OFF\n");
+     pin_low(port8,buzzerPin);
+     printf("BULB OFF\n");
+     pin_high(port9,bulbPin);
+
+   }
+
+
     else
     {
     pin_low(port8, buzzerPin);                 //setting port8 pin low
     printf("BUZZER OFF \n");                   //print buzzer on
-    pin_low(port9, bulbPin);                   //setting port9 pin low
+    pin_high(port9, bulbPin);                   //setting port9 pin low
     printf("BULB OFF \n");                     //print buzzer off
         }
                 
