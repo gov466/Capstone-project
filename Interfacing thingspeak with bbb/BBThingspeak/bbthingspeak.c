@@ -5,11 +5,10 @@
  *      Author: govind
  */
 
-#include <stdio.h> //Standard C input Output Library
-#include <unistd.h> //defines miscellaneous symbolic constants and types, and declares miscellaneous functions
+#include <stdio.h> //Standard C input Output Library 
 #include <string.h> //C Library for various String Operations
 #include <termios.h> // Contains the definitions used by the terminal I/O interfaces
-#include<time.h> //
+#include<time.h> // providing delay using clock fucntion
 #include <sys/types.h> //definitions for types like size_t , ssize_t
 #include <sys/stat.h> //header defines the structure of the data returned by the functions fstat(), lstat(), and stat(), give file size
 #include <fcntl.h> // FIle control, Open, close
