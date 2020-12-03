@@ -36,7 +36,7 @@ Block diagram for Arduino side
    
 #### Schematic Diagram
 
-![ ](Images/Schematic Diagram-1.jpg)
+![ ](Images/SchematicDiagram-1.jpg)
 
 
 Group members - [Sunny devgan](https://github.com/MrSunnyDevgan), [Varundeep singh](https://github.com/varundeepsethi), [Govind raj](https://github.com/gov466)
