@@ -19,7 +19,7 @@ int speed = 0;
 int bytes_read = 0;
 int bytes_written; 
 
-//Function Declaration
+									//Function Declaration
 void readback(int status);
 void delay(unsigned int mseconds);
 void setUART();
