@@ -3,10 +3,10 @@
 #include <string.h> //C Library for various String Operations
 #include <termios.h> // Contains the definitions used by the terminal I/O interfaces 
 #include <fcntl.h> // FIle control, Open, close
-#include <sys/signal.h>
-#include <time.h>
-#include <stdlib.h>  
-#include <sys/ioctl.h>
+#include <sys/signal.h> //calls readback function whenever uart data comes
+#include <time.h> //for providing delay function
+#include <stdlib.h>  //general purpose standard library which includes memmory allocation,conversions etc..
+#include <sys/ioctl.h> //input/output cntrl //for reading and writing to uart
    
 
 #define BAUDRATE B9600
@@ -16,22 +16,15 @@ char receive[20]; // declare a char array for receiving data
 char buf[100]; // A buffer char array to store temporary data
 
 int speed = 0;
-int threshold = 60;
-
 int bytes_read = 0;
- 
 int bytes_written; 
 
 //Function Declaration
 void readback(int status);
 void delay(unsigned int mseconds);
 void setUART();
-void setUART1();
 
-
-//https://github.com/xanthium-enterprises/Serial-Port-Programming-on-Linux/blob/master/USB2SERIAL_Read/Reciever%20(PC%20Side)/SerialPort_read.c
-    
- int main (void) // Main function
+int main (void) // Main function
 {
     
 
@@ -50,7 +43,7 @@ void setUART1();
 		delay(1000);
 		if(speed>0)
 		{
-			printf("Speed : %d\n",speed);
+			printf("Speed : %d\n",speed); //just printing value of speed
 			
 			
 			speed = 0;
@@ -68,33 +61,33 @@ void setUART1();
 void readback(int status)
 {
 	
-	bytes_read = read(file,&receive,sizeof(receive)); // Read the incoming Message from GSM Module
+	bytes_read = read(file,&receive,sizeof(receive)); // Read the incoming Message from arduino Module
 	// Read the file and store the data in receive , read 100 bytes max
 	
 	
 	if(bytes_read > 1) //If no. of bytes are read is more than 1
 	{
 		//printf("\n\nBytes Received - %d\n",bytes_read); // Print how many bytes was received
-		printf("Got Speed: ");
+		printf("Got Speed: "); //print recieved data from bbb
 		for(int i=0;i<bytes_read;i++) //a for loop to print data byte by byte
 		{	
-			if(receive[i] == 'z')
+			if(receive[i] == 'z')// 3z5
 			{
-					receive[i] = '4';
+					receive[i] = '4';  // 345
 			}
 			
-			printf("%c",receive[i]); //print a byte of message from GSM Module
+			printf("%c",receive[i]); //print a byte of message from Arduino Module
 		}
 		printf("\n###\n"); //General Print  
 		
-		bytes_written = write(file, receive, bytes_read); // Sending message to GSM Module
+		bytes_written = write(file, receive, bytes_read); // Sending message to arduino Module
 		
-		sscanf(receive, "%d", &speed);
+		sscanf(receive, "%d", &speed); //copying value of receive to variable speed
 		
 	}
 	else
 	{
-		tcflush(file, TCIFLUSH);
+		tcflush(file, TCIFLUSH);  //for flushing any garbage data if there
 	}
 	tcflush(file, TCIFLUSH);
 	
@@ -105,9 +98,9 @@ void readback(int status)
 
 
 
-void delay(unsigned int mseconds)
+void delay(unsigned int mseconds) //delay in milliseconds
 {
-    clock_t goal = mseconds*1000 + clock();
+    clock_t goal = mseconds*1000 + clock(); //clock function came from time.h
     while (goal > clock());
 }
 
@@ -115,13 +108,13 @@ void setUART()
 {
 	struct sigaction saio;           /* definition of signal action */
     /* install the signal handler before making the device asynchronous */
-	saio.sa_handler = readback;
+	saio.sa_handler = readback; //readback function called from here
 	//saio.sa_mask = 0;
 	sigemptyset(&saio.sa_mask);
 	sigaddset(&saio.sa_mask, SIGINT);
 	saio.sa_flags = 0;
 	saio.sa_restorer = NULL;
-	sigaction(SIGIO,&saio,NULL);
+	sigaction(SIGIO,&saio,NULL); //sigio comes from <sys.signal.h> library
     fcntl(file, F_SETOWN, getpid());
     fcntl(file, F_SETFL, FASYNC);
  
