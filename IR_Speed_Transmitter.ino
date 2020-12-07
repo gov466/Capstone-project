@@ -76,8 +76,8 @@ void loop()
       String received;
       if (transmitter.available()) //reading back the trasnmitted data from bbb
       {
-        Serial.print("GOT: ");
-        while(transmitter.available()) 
+        Serial.print("GOT: "); //  print statement
+        while(transmitter.available())  //until data is finished recieving keep checking transmiiter.available()
         {
           received += (char)transmitter.read(); //recieving data from bbb
           delay(1);
@@ -100,7 +100,7 @@ void loop()
   {
     if (transmitter.available()) 
     {
-    Serial.write(transmitter.read());
+    Serial.write(transmitter.read()); //print the data to serial monitor
     }
   }
 }
