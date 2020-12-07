@@ -67,8 +67,7 @@ void readback(int status)
 	
 	if(bytes_read > 1) 						//If no. of bytes are read is more than 1
 	{
-									//printf("\n\nBytes Received - %d\n",bytes_read); 	
-									// Print how many bytes was received
+		printf("\n\nBytes Received - %d\n",bytes_read); 	// Print how many bytes was received
 		printf("Got Speed: "); 					//print recieved data from bbb
 		for(int i=0;i<bytes_read;i++) 				//a for loop to print data byte by byte
 		{	
