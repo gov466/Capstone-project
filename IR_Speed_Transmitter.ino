@@ -65,12 +65,7 @@ void loop()
     for(int i=0; i<3; i++)
     {
       transmitter.println(data);                                //transmitting data to bbb
-      transmitter.println(" ");
-      transmitter.println(" ");
-      transmitter.println(" ");
-      transmitter.println(" ");
-      transmitter.println(" ");
-      transmitter.println(" ");
+      
   
       delay(1000);                                              //1000 milliseconds
       String received;
