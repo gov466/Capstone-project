@@ -22,6 +22,9 @@ int bytes_written;
 									//Function Declaration
 void readback(int status);
 void delay(unsigned int mseconds);
+
+https://github.com/xanthium-enterprises/Serial-Port-Programming-on-Linux/blob/master/USB2SERIAL_Read/Reciever%20(PC%20Side)/SerialPort_read.c
+
 void setUART();
 
 int main (void) 							// Main function
@@ -35,7 +38,7 @@ int main (void) 							// Main function
         return 0;
     }    
     setUART();
-	printf("\n Wait \n");
+	printf("\n Wait \n"); //print wait 
 	
 	while(1)
 	{
