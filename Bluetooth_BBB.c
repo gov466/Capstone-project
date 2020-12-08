@@ -105,7 +105,7 @@ void readback(int status)
 void delay(unsigned int mseconds) 					//delay in milliseconds
 {
     clock_t goal = mseconds*1000 + clock(); 				//clock function came from time.h
-    while (goal > clock());
+    while (goal > clock());                                     //https://www.tutorialspoint.com/c_standard_library/c_function_clock.htm
 }
 
 void setUART()
