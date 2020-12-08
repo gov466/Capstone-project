@@ -23,7 +23,7 @@ int bytes_written;
 void readback(int status);
 void delay(unsigned int mseconds);
 
-https://github.com/xanthium-enterprises/Serial-Port-Programming-on-Linux/blob/master/USB2SERIAL_Read/Reciever%20(PC%20Side)/SerialPort_read.c
+//https://github.com/xanthium-enterprises/Serial-Port-Programming-on-Linux/blob/master/USB2SERIAL_Read/Reciever%20(PC%20Side)/SerialPort_read.c
 
 void setUART();
 
