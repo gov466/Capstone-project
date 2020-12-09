@@ -43,6 +43,6 @@ Group members - [Sunny devgan](https://github.com/MrSunnyDevgan), [Varundeep sin
 
 Project guide - [Prof. Dr. Mike Aleshams](https://github.com/mikeshams)
 
-Follow [this link](https://billwaa.wordpress.com/2014/10/03/beaglebone-black-launch-python-script-at-boot-like-arduino-sketch/)To run the code when BBB is powered on
+Follow [this link](https://billwaa.wordpress.com/2014/10/03/beaglebone-black-launch-python-script-at-boot-like-arduino-sketch/) to run the code when BBB is powered on
 
    #### PROJECT ON PROGRESS                                                                                                                                                                                                                                                                      
