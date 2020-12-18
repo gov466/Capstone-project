@@ -3,15 +3,12 @@
 #include <string.h> //C Library for various String Operations
 #include <termios.h> // Contains the definitions used by the terminal I/O interfaces 
 #include <fcntl.h> // FIle control, Open, close
-#include <sys/signal.h>
-#include <time.h>
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <unistd.h>  
-#include <linux/i2c-dev.h>  
-#include <fcntl.h>  
-#include <sys/ioctl.h>
-#include <iobb.h>   
+#include <sys/signal.h>//calls readback function whenever uart data comes
+#include <time.h> 			//for providing delay function
+#include <stdlib.h>  			//general purpose standard library which includes memmory allocation,conversions etc..
+#include <sys/ioctl.h> 			//input/output cntrl //for reading and writing to uart
+#include <linux/i2c-dev.h>   //communicate with I2C devices
+#include <iobb.h>   //input/output
 
 
 #define I2C_BUS    "/dev/i2c-2" // I2C bus device on a Beaglebone Black 
