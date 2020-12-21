@@ -47,5 +47,5 @@ Follow [this link](https://stackoverflow.com/questions/28854705/executing-a-scri
 
 ##RESULTS
 	
-	![_](Images/result1.jpeg)
+   ![_](Images/result.jpeg)
    #### PROJECT COMPLETED SUCCESSFULLY                                                                                                                                                                                                                                                                      
