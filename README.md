@@ -53,6 +53,6 @@ Follow [this link](https://stackoverflow.com/questions/28854705/executing-a-scri
    ### LCD displays normal speed
    ![_](Images/normalspeed.jpeg)
    ### LCD displays overspeed
-   ![_](Images/overspeed.jpeg)
+   ![_](Images/overspeed.PNG)
    
    #### PROJECT COMPLETED SUCCESSFULLY                                                                                                                                                                                                                                                                      
