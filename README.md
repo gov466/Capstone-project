@@ -46,7 +46,7 @@ Project guide - [Prof. Dr. Mike Aleshams](https://github.com/mikeshams)
 Follow [this link](https://stackoverflow.com/questions/28854705/executing-a-script-on-startup-using-beaglebone-black) to run the code when BBB is powered on
 
 ## RESULTS
-![Youtube video of whole project working](https://www.youtube.com/watch?v=AKwDU2gV4gU)
+[Youtube video of whole project working](https://www.youtube.com/watch?v=AKwDU2gV4gU)
    ### Top view of the whole project	
    ![_](Images/result.jpeg)
    ### while starting displays
