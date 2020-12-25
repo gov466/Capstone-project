@@ -56,4 +56,4 @@ Follow [this link](https://stackoverflow.com/questions/28854705/executing-a-scri
    ### LCD displays overspeed
    ![_](Images/overspeed.PNG)
    
-   #### PROJECT COMPLETED SUCCESSFULLY                                                                                                                                                                                                                                                                      
+   #### PROJECT COMPLETED AND DEMONSTRATED SUCCESSFULLY ON 22 DECEMBER 2020                                                                                                                                                                                                                                           
